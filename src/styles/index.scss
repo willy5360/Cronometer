@@ -1,13 +1,87 @@
 @import "~bootstrap/scss/bootstrap.scss";
 
-/* 
+body{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("https://images.pexels.com/photos/6663/desk-white-black-header.jpg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260");
+}
 
-    You can write your own styles here...
+.container{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    background: transparent;
     
+}
+.cronobox{
+    width: fit-content;
     
-    ...Or you can use the import command to include 
-    other sylesheets into your bunde as well, e.j:
-    
-    import 'relative/path/to/stylesheet.scss';
+    position: relative;
+    padding: 15px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    height: fit-content;
+    background-color: rgba(151, 151, 151, 0.15);  
+    backdrop-filter: blur(5px);
 
-*/
+}
+.BoxNumber{
+    z-index: 1;
+    width: fit-content;
+    height: fit-content;
+    border: 0;
+    border-radius: 15px;
+    padding: 25px 50px;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    align-items: center;
+    font-size: 4vw;
+    // width: 150px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+.TwoDots{
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+    width: fit-content;
+    height: fit-content;
+    border: 0;
+    border-radius: 15px;
+  
+    margin: 15px;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    align-items: center;
+}
+.dot{
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    margin: 15px 0;
+    background-color: rgba(255, 255, 255, 0.151);  
+    backdrop-filter: blur(5px);    
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;}
+.NameBox{
+    justify-content: center;
+    align-content: center;
+    align-self: center;
+    margin-bottom: 35px;
+}
+h1{
+    font-size: 5vw;
+
+    background: -webkit-radial-gradient(circle, rgba(0,0,0,0.6741071428571428) 18%, rgba(161,161,161,0.39119397759103647) 36%, rgba(37,37,37,1) 52%, rgba(125,125,125,0.33237044817927175) 74%, rgba(0,0,0,0.5816701680672269) 93%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+}
+
+

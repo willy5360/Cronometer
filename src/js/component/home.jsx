@@ -1,37 +1,70 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import CardCounter from "./cardCounter.jsx";
 
-// const Cronometer = [
-// 	{
-// 		rate: 100000
-// 	},
-// 	{
-// 		rate: 10000
-// 	},
-// 	{
-// 		rate: 1000
-// 	}
-// ];
-
-//create your first component
 const Home = () => {
-	// let Mapeo = Cronometer.map((paramenter, index) => {
-	// 	return <CardCounter key={index.toString()} rate={paramenter.rate} />;
-	// });
+	// const [star, setStar] = useState([]);
+	const [restart, setRestart] = useState(true);
+	const [reset, setReset] = useState(true);
+
+	const ReloadButton = () => {
+		return setReset(!reset);
+	};
+
 	return (
 		<div className="container">
 			<div className="NameBox">
-				<h1>Cronometer</h1>
+				<h1>Counter</h1>
 			</div>
 			<div className="cronobox">
-				<CardCounter rate={1000000} />
-				<CardCounter rate={100000} />
+				<CardCounter
+					rate={6000000}
+					isRunning={restart}
+					isReset={reset}
+					stopNumber={9}
+				/>
+				<CardCounter
+					rate={60000}
+					isRunning={restart}
+					isReset={reset}
+					stopNumber={9}
+				/>
 				<div className="TwoDots">
 					<div className="dot"></div>
 					<div className="dot"></div>
 				</div>
-				<CardCounter rate={10000} />
-				<CardCounter rate={1000} />
+				<CardCounter
+					rate={10000}
+					isRunning={restart}
+					isReset={reset}
+					stopNumber={5}
+				/>
+				<CardCounter
+					rate={1000}
+					isRunning={restart}
+					isReset={reset}
+					stopNumber={9}
+				/>
+			</div>
+			<div className="footerButtons ">
+				<button
+					className="buttonCounter restart"
+					onClick={ReloadButton}>
+					<i className="fas fa-redo fa-2x"></i>
+				</button>
+				<button
+					className="buttonCounter play"
+					onClick={() => {
+						setRestart(true);
+					}}>
+					<i className="far fa-play-circle fa-2x"></i>
+				</button>
+				<button
+					className="buttonCounter pause"
+					onClick={() => {
+						setRestart(false);
+					}}>
+					<i className="far fa-pause-circle fa-2x"></i>
+				</button>
 			</div>
 		</div>
 	);

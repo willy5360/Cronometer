@@ -1,4 +1,5 @@
 @import "~bootstrap/scss/bootstrap.scss";
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Orbitron&family=Russo+One&display=swap');
 
 body{
     background-repeat: no-repeat;
@@ -16,7 +17,6 @@ body{
 }
 .cronobox{
     width: fit-content;
-    
     position: relative;
     padding: 15px;
     border-radius: 15px;
@@ -30,6 +30,59 @@ body{
     backdrop-filter: blur(5px);
 
 }
+.footerButtons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 40px;
+    padding: 10px;
+    align-items: center;
+    align-self: center;
+    border: 1 solid red;
+    border-radius: 15px;
+    background-color: rgba(151, 151, 151, 0.15);  
+    backdrop-filter: blur(5px);
+    height: fit-content;
+    width: 20%;
+}
+.buttonCounter{
+    border: none;
+    background-color: rgba(151, 151, 151, 0.15);  
+    backdrop-filter: blur(5px);
+    border-radius: 5px;
+    padding: 10px;
+    height: fit-content;
+    width: fit-content;
+}
+.restart:hover {
+    background-color: rgba(255, 0, 0, 0.15);
+    color: white;
+}
+
+.restart:active{
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+.play:hover{
+    background-color: rgba(21, 255, 0, 0.15);
+    color: white;
+  
+}
+
+.play:active{
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+.pause:hover{
+    background-color: rgba(238, 255, 0, 0.15);
+    color: white;
+  
+}
+
+.pause:active{
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
 .BoxNumber{
     z-index: 1;
     width: fit-content;
@@ -43,9 +96,9 @@ body{
     align-self: center;
     align-items: center;
     font-size: 4vw;
-    // width: 150px;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
+
 .TwoDots{
     display: flex;
     flex-direction: column;
@@ -61,6 +114,7 @@ body{
     align-self: center;
     align-items: center;
 }
+
 .dot{
     width: 30px;
     height: 30px;
@@ -68,16 +122,19 @@ body{
     margin: 15px 0;
     background-color: rgba(255, 255, 255, 0.151);  
     backdrop-filter: blur(5px);    
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;}
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
 .NameBox{
     justify-content: center;
     align-content: center;
     align-self: center;
     margin-bottom: 35px;
 }
+
 h1{
     font-size: 5vw;
-
+    font-family: 'Russo One', sans-serif;
     background: -webkit-radial-gradient(circle, rgba(0,0,0,0.6741071428571428) 18%, rgba(161,161,161,0.39119397759103647) 36%, rgba(37,37,37,1) 52%, rgba(125,125,125,0.33237044817927175) 74%, rgba(0,0,0,0.5816701680672269) 93%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;

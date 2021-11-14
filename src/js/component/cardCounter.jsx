@@ -6,19 +6,29 @@ const CardCounter = props => {
 
 	useEffect(() => {
 		const Interval = setInterval(() => {
-			if (number < 9) {
-				setNumber(number + 1);
-			} else {
-				setNumber(0);
+			if (props.isRunning) {
+				if (number != props.stopNumber) {
+					setNumber(number + 1.0);
+				} else {
+					setNumber(0);
+				}
 			}
 		}, props.rate);
 		return () => clearInterval(Interval);
-	}, [number]);
+	}, [number, props.isRunning]);
+
+	useEffect(() => {
+		setNumber(0);
+	}, [props.isReset]);
 
 	return <div className="BoxNumber">{number}</div>;
 };
+
 CardCounter.propTypes = {
-	rate: PropTypes.number
+	rate: PropTypes.number,
+	isRunning: PropTypes.bool,
+	isReset: PropTypes.number,
+	stopNumber: PropTypes.number
 };
 
 export default CardCounter;
